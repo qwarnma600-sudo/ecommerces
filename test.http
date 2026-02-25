@@ -1,0 +1,73 @@
+### 1. نیا یوزر رجسٹر کریں
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Awan Developer",
+    "email": "awan@test.com",
+    "password": "password123"
+}
+
+### ---------------------------------------------------
+
+### 2. لاگ ان کریں
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "awan@test.com",
+    "password": "password123"
+}
+
+### ---------------------------------------------------
+
+### 3. خود کو ایڈمن بنائیں
+PUT http://localhost:5000/api/users/make-admin/1
+
+### ---------------------------------------------------
+
+### 4. Men کیٹیگری کے لیے سامان (mens)
+POST http://localhost:5000/api/products/add
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "title": "Men Stylish Jacket",
+    "description": "Premium blue jacket for men",
+    "price": 2500,
+    "image": "product_13.png", 
+    "category": "mens",
+    "stock": 10
+}
+
+### ---------------------------------------------------
+
+### 5. Women کیٹیگری کے لیے سامان (womens)
+POST http://localhost:5000/api/products/add
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "title": "Women Pink Dress",
+    "description": "Beautiful dress for women",
+    "price": 1800,
+    "image": "product_1.png",
+    "category": "womens",
+    "stock": 15
+}
+
+### ---------------------------------------------------
+
+### 6. Kids کیٹیگری کے لیے سامان (kids)
+POST http://localhost:5000/api/products/add
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "title": "Kid Green T-Shirt",
+    "description": "Cotton shirt for kids",
+    "price": 950,
+    "image": "product_25.png",
+    "category": "kids",
+    "stock": 20
+}
